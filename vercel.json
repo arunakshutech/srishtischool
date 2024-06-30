@@ -1,28 +1,12 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/wsgi.py",
-      "use": "@vercel/python"
-    }
-  ],
   "routes": [
-    {
-<<<<<<< HEAD
-      "src": "/static/(.*)",
-      "dest": "example/static/$1"
-=======
-      "src": "/static/",
-      "dest": "yourapp/static/"
->>>>>>> b0606a6ab14c1bf4960137ffcb50b5da2c380a0e
-    },
-    {
-      "src": "/media/(.*)",
-      "dest": "example/media/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "api/wsgi.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "example/static/$1"
     }
   ]
 }
