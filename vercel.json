@@ -1,5 +1,20 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
   "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "yourapp/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "yourapp/media/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "api/wsgi.py"
