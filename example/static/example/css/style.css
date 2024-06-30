@@ -6,6 +6,7 @@ body {
     padding: 0;
 }
 
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -34,14 +35,30 @@ body {
 }
 
 .navbar-menu li a {
+    position: relative;
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
+.navbar-menu li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: #0319aa;
+    transition: width 0.3s;
+}
+
+.navbar-menu li a:hover::after {
+    width: 100%;
+}
+
 .navbar-menu li a:hover {
-    color: #007BFF;
+    color: #0319aa;
 }
 
 .navbar-toggle {
@@ -51,7 +68,7 @@ body {
 }
 
 .navbar-toggle .bar {
-    width: 25px;
+    width: 30px;
     height: 3px;
     background-color: #333;
     margin: 4px 0;
@@ -61,17 +78,20 @@ body {
 @media (max-width: 768px) {
     .navbar-menu {
         position: absolute;
-        top: 60px;
+        top: 65px;
         left: -100%;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         transition: left 0.3s;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         border-radius: 10px;
+        
+        
     }
+
     .navbar-logo {
         font-size: 20px;
         font-weight: bold;
@@ -79,6 +99,18 @@ body {
 
     .navbar-menu li {
         margin: 1rem 0;
+    }
+
+    .navbar-menu li a {
+        color: #ffffff;
+    }
+
+    .navbar-menu li a::after {
+        background-color: #00e5ff;
+    }
+
+    .navbar-menu li a:hover {
+        color: #00e5ff;
     }
 
     .navbar-toggle {
@@ -94,11 +126,11 @@ body {
     }
 
     .navbar-toggle.active .bar:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
+        transform: translateY(14px) rotate(45deg);
     }
 
     .navbar-toggle.active .bar:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
@@ -107,7 +139,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
-    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
 }
 
 
@@ -125,18 +157,23 @@ body {
 .carousel-container {
     width: 100%;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     position: relative;
+    z-index: 10;
+    
+
     
 }
+
 
 /* Carousel slide */
 .carousel-slide {
     display: flex;
-    height: 600px;
     image-resolution: 1080px;
     transition: transform 0.5s ease-in-out;
+    height: 400px;
 }
 
 /* Carousel image */
@@ -157,9 +194,76 @@ body {
     animation: fadeIn 1.5s;
 }
 
+
+
+.welcome-section {
+    margin-top: 30px;
+    margin-left: 30%;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 0px 0px rgb(0, 0, 0);
+    width: 50%;
+    border-radius: 10px;
+    opacity: 8;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.welcome-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+}
+
+.welcome-section p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+    color: #333;
+}
+
+/* AOS library styles for smooth scrolling animations */
+[data-aos] {
+    opacity: 9 !important;
+    transform: translateY(1) !important;
+}
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-container {
         width: 100%;
+        
+    }
+    .carousel-image {
+        min-width: 100%;
+        transition: transform 0.5s ease-in-out;
+        object-fit: cover;
+        height: 300px;
+    }
+
+    .carousel-slide {
+        display: flex;
+        image-resolution: 1080px;
+        transition: transform 0.5s ease-in-out;
+        height: 300px;
+    }
+    .welcome-section {
+        padding: 2rem;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 0 4px 0px rgb(0, 0, 0);
+        width: 100%;
+        max-width: 800px;
+        border-radius: 10px;
+        opacity: 8;
+        transform: translateY(100px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        margin-left: 0%;
     }
 }
+
+
+
+/* style.css */
+
