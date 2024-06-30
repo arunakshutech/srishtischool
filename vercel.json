@@ -8,8 +8,8 @@
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "yourapp/static/$1"
+      "src": "/static/",
+      "dest": "yourapp/static/"
     },
     {
       "src": "/media/(.*)",
