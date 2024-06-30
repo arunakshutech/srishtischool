@@ -6,7 +6,7 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "example/static/$1"
+      "dest": "example/static/"
     }
   ]
 }
