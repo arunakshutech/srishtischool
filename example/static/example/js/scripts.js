@@ -1,8 +1,11 @@
-const burger = document.querySelector('.burger');
-const navLinks = document.querySelector('.nav-links');
+// scripts.js
 
-burger.addEventListener('click', () => {
-    // Toggle the active class to show/hide nav links
-    navLinks.classList.toggle('active');
-    burger.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('navbar-toggle');
+    const navbarMenu = document.getElementById('navbar-menu');
+
+    toggleButton.addEventListener('click', () => {
+        navbarMenu.classList.toggle('active');
+        toggleButton.classList.toggle('active');
+    });
 });
