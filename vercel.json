@@ -9,10 +9,9 @@
       "src": "build_files.sh",
       "use": "@vercel/static",
       "config": {
-        "maxLambdaSize": "15mb",
-        "runtime": "python3.9"
+        "distDir": "staticfiles"
       }
-      
+
     }
   ],
   "routes": [
