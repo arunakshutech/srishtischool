@@ -6,6 +6,11 @@ body {
     padding: 0;
 }
 
+.navbar-shrink {
+    padding: 0.5rem 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
 /* Navbar Styles */
 .navbar {
     display: flex;
@@ -218,17 +223,27 @@ body {
 
 
 
+.content{
+    width: 100%;
+}
+
 .welcome-section {
-    margin-top: 30px;
-    margin-left: 30%;
+    display: flex;
+    padding: 2rem;
     text-align: center;
     background-color: #ffffff;
-    box-shadow: 0 0px 0px rgb(0, 0, 0);
-    width: 50%;
+    box-shadow: 0 4px 0px rgb(0, 0, 0);
     border-radius: 10px;
     opacity: 8;
     transform: translateY(100px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin-left: 0%;
+    
+}
+.schoolimg{
+    width: 500px;
+    height: 400px;
+    margin: 20px;
 }
 
 .welcome-section h1 {
@@ -242,6 +257,13 @@ body {
     font-size: 1rem;
     line-height: 2;
     color: #333;
+}
+.small{
+    display: none;
+}
+.subcontent{
+    margin-top: 10%;
+    
 }
 
 /* AOS library styles for smooth scrolling animations */
@@ -272,6 +294,7 @@ body {
     }
     .welcome-section {
         padding: 2rem;
+        display: block;
         text-align: center;
         background-color: #ffffff;
         box-shadow: 0 4px 0px rgb(0, 0, 0);
@@ -283,7 +306,21 @@ body {
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         margin-left: 0%;
     }
+    .schoolimg{
+        width: 400px;
+        height: 300px;
+        margin: 0%;
+        bottom: 10px;
+    
+    }
+    .big{
+        display: none;
+    }
+    .small{
+        display: block;
+    }
 }
+
 
 
 

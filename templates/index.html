@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="navbar-logo">
             <span id="logo-text"></span>
         </div>
@@ -38,14 +38,20 @@
         </div>
     </div>
 
-    <div class="content">
+    <div class="container-fluid">
         <div class="welcome-section" data-aos="fade-up">
-            <h1>Welcome to Srishti Matriculation School, Chengam</h1>
-            <p>
-                Srishti places a unique emphasis on personality development. Recognizing the crucial truth that success in the modern world depends on excellence in a chosen field, Srishti seeks to cultivate individual talents and helps the students pursue excellence in their field of interests. Special attention is also paid in Srishti to nurture education in an environment of breezy freedom and unparalleled personal rapport.
-            </p>
+            <h1 class="small">Welcome to Srishti Matriculation School, Chengam</h1>
+            <img src="{% static 'example/images/school.jpeg' %}" alt="" class="schoolimg">
+            <div class="subcontent">
+                <h1 class="big">Welcome to Srishti Matriculation School, Chengam</h1>
+                <p>
+                    Srishti places a unique emphasis on personality development. Recognizing the crucial truth that success in the modern world depends on excellence in a chosen field, Srishti seeks to cultivate individual talents and helps the students pursue excellence in their field of interests. Special attention is also paid in Srishti to nurture education in an environment of breezy freedom and unparalleled personal rapport.
+                </p>
+            </div>
         </div>
     </div>
+
+    
 
 
     <!-- Load static JavaScript -->

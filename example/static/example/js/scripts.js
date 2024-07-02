@@ -36,3 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
         carouselSlide.style.transform = `translateX(${-size * counter+5}px)`;
     });
 });
+
+
+// scripts.js
+
+
+
+
+
+
+
+
+
+
+
+
