@@ -146,6 +146,8 @@ body {
     .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
+   
 }
 
 #logo-text::after {
@@ -243,6 +245,8 @@ body {
 }
 
 
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-container {
@@ -263,18 +267,20 @@ body {
         height: 300px;
     }
     .welcome-section {
-        padding: 2rem;
+        padding: 0rem;
         text-align: center;
         background-color: #ffffff;
         box-shadow: 0 4px 0px rgb(0, 0, 0);
-        width: 100%;
+        width: 50%;
         max-width: 800px;
         border-radius: 10px;
         opacity: 8;
         transform: translateY(100px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        margin-left: 0%;
+       
     }
+    
+ 
 }
 
 

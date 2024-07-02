@@ -138,6 +138,8 @@ body {
     object-fit: cover;
 }
 
+
+
 /* Fade-in animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(1.1); }
