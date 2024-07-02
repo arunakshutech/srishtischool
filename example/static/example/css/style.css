@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: white;
+    background-color: rgb(115, 255, 201);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -30,10 +30,16 @@ body {
     margin: 0;
     padding: 0;
     z-index: 15;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .navbar-menu li {
-    margin-left: 1.5rem;
+    justify-content: space-around;
+    
+    padding: 15px;
 }
 
 .navbar-menu li a {
@@ -42,6 +48,8 @@ body {
     color: #000000;
     font-size: 1rem;
     transition: color 0.3s;
+    font-weight: 500;
+    
 }
 
 .navbar-menu li a::after {
@@ -83,7 +91,7 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 1rem 2rem;
-        background-color: white;
+        background-color:rgb(115, 255, 201);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
@@ -112,7 +120,7 @@ body {
     }
 
     .navbar-menu li {
-        margin: 1rem 0;
+        margin:  0;
     }
 
     .navbar-menu li a {
@@ -146,8 +154,6 @@ body {
     .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-
-   
 }
 
 #logo-text::after {
@@ -173,9 +179,9 @@ body {
 .carousel-container {
     width: 100%;
     overflow: hidden;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 5;
     
@@ -245,8 +251,6 @@ body {
 }
 
 
-
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-container {
@@ -267,23 +271,20 @@ body {
         height: 300px;
     }
     .welcome-section {
-        padding: 0rem;
+        padding: 2rem;
         text-align: center;
         background-color: #ffffff;
         box-shadow: 0 4px 0px rgb(0, 0, 0);
-        width: 50%;
+        width: 100%;
         max-width: 800px;
         border-radius: 10px;
         opacity: 8;
         transform: translateY(100px);
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-       
+        margin-left: 0%;
     }
-    
- 
 }
 
 
 
 /* style.css */
-
