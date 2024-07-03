@@ -1,10 +1,11 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    
     margin: 0;
     padding: 0;
 }
+
 
 /* Navbar Styles */
 .navbar {
@@ -12,17 +13,19 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: rgb(115, 255, 201);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 10;
+    backdrop-filter: blur(2px);
+    background-color: #ff0000;
 }
 
 .navbar-logo {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
+
 
 .navbar-menu {
     display: flex;
@@ -103,7 +106,7 @@ body {
         left: -100%;
         width: 100%;
         height: 330px;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.6);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
@@ -162,6 +165,8 @@ body {
     overflow: hidden;
     display: inline-block;
     animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
+    color: rgb(0, 0, 0);
+    
 }
 
 
@@ -195,7 +200,7 @@ body {
     display: flex;
     image-resolution: 1080px;
     transition: transform 0.5s ease-in-out;
-    height: 400px;
+    height: 500px;
 }
 
 /* Carousel image */
@@ -218,17 +223,28 @@ body {
 
 
 
+.content{
+    width: 100%;
+}
+
 .welcome-section {
-    margin-top: 30px;
-    margin-left: 30%;
+    display: flex;
+    padding: 2rem;
     text-align: center;
     background-color: #ffffff;
-    box-shadow: 0 0px 0px rgb(0, 0, 0);
-    width: 50%;
+    box-shadow: 0 4px 0px rgb(0, 0, 0);
     border-radius: 10px;
     opacity: 8;
     transform: translateY(100px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    margin-left: 0%;
+    
+}
+.schoolimg{
+    width: 500px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 9px;
 }
 
 .welcome-section h1 {
@@ -242,6 +258,13 @@ body {
     font-size: 1rem;
     line-height: 2;
     color: #333;
+}
+.small{
+    display: none;
+}
+.subcontent{
+    margin-top: 10%;
+    
 }
 
 /* AOS library styles for smooth scrolling animations */
@@ -272,6 +295,7 @@ body {
     }
     .welcome-section {
         padding: 2rem;
+        display: block;
         text-align: center;
         background-color: #ffffff;
         box-shadow: 0 4px 0px rgb(0, 0, 0);
@@ -283,7 +307,21 @@ body {
         transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         margin-left: 0%;
     }
+    .schoolimg{
+        width: 400px;
+        height: 300px;
+        margin: 0%;
+        bottom: 10px;
+    
+    }
+    .big{
+        display: none;
+    }
+    .small{
+        display: block;
+    }
 }
+
 
 
 

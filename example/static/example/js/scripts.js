@@ -42,8 +42,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// JavaScript to toggle the .scrolled class on scroll
+window.onscroll = function() {
+    var navbar = document.getElementById('navbar');
 
+    // Add the scrolled class to navbar when you scroll up
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+};
 
+let next = document.querySelector('.next')
+let prev = document.querySelector('.prev')
+
+next.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').appendChild(items[0])
+})
+
+prev.addEventListener('click', function(){
+    let items = document.querySelectorAll('.item')
+    document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
+})
 
 
 
