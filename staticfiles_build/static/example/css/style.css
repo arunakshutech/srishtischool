@@ -1,5 +1,5 @@
 /* styles.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poetsen+One&family=Rowdies:wght@300;400;700&display=swap');
 body {
     
     margin: 0;
@@ -12,17 +12,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.5rem 4rem;
     position: sticky;
     top: 0;
     z-index: 10;
     backdrop-filter: blur(2px);
-    background-color: #ff0000;
+    background-color: rgba(115, 188, 224, 0.98); /* Use rgba for transparency effect */
+    transition: background-color 0.3s ease, padding 0.3s ease; /
 }
 
 .navbar-logo {
     font-size: 1.5rem;
     font-weight: bold;
+    
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(9px);
+    background-color: rgba(247, 251, 255, 0.174); /* Adjusted color with transparency */
+    padding: 0.5rem 5rem; /* Adjusted padding for smaller navbar */
+    
 }
 
 
@@ -87,6 +96,37 @@ body {
     margin: 4px 0;
     transition: all 0.3s;
 }
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.block{
+    animation: appear  linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+
+@keyframes slide-in {
+    from {
+        transform: translateX(0%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .navbar {
@@ -159,8 +199,13 @@ body {
     }
 }
 
+
+
+
+
+
 #logo-text::after {
-    content: 'Srishti Matriculation School';
+    content: 'Srishti higher-secondary School';
     white-space: nowrap;
     overflow: hidden;
     display: inline-block;
@@ -200,7 +245,7 @@ body {
     display: flex;
     image-resolution: 1080px;
     transition: transform 0.5s ease-in-out;
-    height: 500px;
+    height: 700px;
 }
 
 /* Carousel image */
@@ -223,21 +268,17 @@ body {
 
 
 
-.content{
-    width: 100%;
-}
-
 .welcome-section {
     display: flex;
     padding: 2rem;
     text-align: center;
-    background-color: #ffffff;
-    box-shadow: 0 4px 0px rgb(0, 0, 0);
+    background-color: #3663acc9;
     border-radius: 10px;
     opacity: 8;
     transform: translateY(100px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
     margin-left: 0%;
+    color: whitesmoke;
     
 }
 .schoolimg{
@@ -275,6 +316,165 @@ body {
 
 
 /* Responsive adjustments */
+
+
+
+.containermain{
+    padding:2%;
+    width: 100%;
+    text-align: center;
+    z-index: 15;
+}
+
+.containerr{
+    position: relative;
+    width:100%;
+    height: 600px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    overflow: hidden;
+    z-index: 15;
+    
+}
+
+
+.containerr .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+/* style.css */
+
 @media (max-width: 768px) {
     .carousel-container {
         width: 100%;
@@ -284,21 +484,21 @@ body {
         min-width: 100%;
         transition: transform 0.5s ease-in-out;
         object-fit: cover;
-        height: 300px;
+        height: 400px;
     }
 
     .carousel-slide {
         display: flex;
         image-resolution: 1080px;
         transition: transform 0.5s ease-in-out;
-        height: 300px;
+        height: 400px;
     }
     .welcome-section {
-        padding: 2rem;
+        
+        padding: 1rem;
         display: block;
         text-align: center;
         background-color: #ffffff;
-        box-shadow: 0 4px 0px rgb(0, 0, 0);
         width: 100%;
         max-width: 800px;
         border-radius: 10px;
@@ -320,9 +520,203 @@ body {
     .small{
         display: block;
     }
+
+
+    .containerr .slide .item{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        border-radius: 20px;
+        box-shadow: 0 30px 50px #505050;
+        background-position: 50% 50%;
+        background-size: cover;
+        display: inline-block;
+        transition: 0.5s;
+    }
+
+    .containermain{
+        margin-top: 20%;
+        padding:0;
+        width: 100%;
+        text-align: center;
+    }
+    .containerr{
+        
+        margin-top: 5%;
+        position: absolute;
+        width:100%;
+        height: 600px;
+        background: #f5f5f5;
+        box-shadow: 0 30px 50px #dbdbdb;
+        overflow: hidden;
+        margin: 0;
+    }
+    .slide .item:nth-child(1),
+    .slide .item:nth-child(2){
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .slide .item:nth-child(3){
+        left: 50%;
+    }
+    .slide .item:nth-child(4){
+        left: calc(50% + 220px);
+    }
+    .slide .item:nth-child(5){
+        left: calc(50% + 440px);
+    }
+
+    /* here n = 0, 1, 2, 3,... */
+    .slide .item:nth-child(n + 6){
+        left: calc(50% + 660px);
+        opacity: 0;
+    }
+
+
+
+    .item .content{
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        width: 300px;
+        text-align: left;
+        color: #eee;
+        transform: translate(0, -50%);
+        font-family: system-ui;
+        display: none;
+    }
+
+
+    .slide .item:nth-child(2) .content{
+        display: block;
+    }
+
+
+    .content .name{
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: bold;
+        opacity: 0;
+        animation: animate 1s ease-in-out 1 forwards;
+    }
+
+    .content .des{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: animate 1s ease-in-out 0.3s 1 forwards;
+    }
+
+    .content button{
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        animation: animate 1s ease-in-out 0.6s 1 forwards;
+    }
 }
 
 
 
+.event-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px; /* Ensure there's some space to scroll into view */
+}
 
-/* style.css */
+
+
+.event-item.left {
+    transform: translateX(-100%);
+}
+
+.event-item.right {
+    transform: translateX(100%);
+}
+
+.event-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+      
+/* top students section */
+
+.top-students {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 40px;
+    overflow: hidden;
+
+}
+.student-card {
+    background-color: #dfb9df45;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
+    margin:10px;
+    text-align: center;
+    width: 300px;
+    backdrop-filter: blur(10px);
+
+    
+}
+.student-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 30px;
+    width: 100%;
+    height: fit-content;
+}
+.student-card .card-content {
+    padding: 20px;
+    text-align: center;
+}
+.student-card h3 {
+    margin: 10px 0;
+}
+.student-card p {
+    color: #555;
+}
+
+.event-item {
+    width: 100%;
+    margin: 50px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    border-radius: 10px;
+
+} 
+
+
+.card{
+    height: 100%;
+    background-color: #00e5ff6f;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.card-text {
+    flex-grow: 1;
+    color: #666;
+}
+
+
+.fcard{
+    background-color: #00e5ff95;
+}

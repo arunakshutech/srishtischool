@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Srishti school</title>
+    <title>Home - Srishti School</title>
     <!-- Load static CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" >
         <div class="navbar-logo">
             <span id="logo-text"></span>
         </div>
@@ -31,7 +31,6 @@
     </nav>
 
     <div>
-
         <div class="carousel-container">
             <div class="carousel-slide">
                 <img src="{% static 'example/images/p1.jpg' %}" class="carousel-image" alt="Image 1">
@@ -42,9 +41,9 @@
         </div>
 
         <div class="container-fluid block">
-            <div class="welcome-section" >
-                <h1 class="small">Welcome to Srishti Matriculation School, Chengam</h1>
-                <img src="{% static 'example/images/school.jpeg' %}" alt="" class="schoolimg">
+            <div class="welcome-section">
+                <h1 class="small">Welcome to Srishti higher-secondary School, Chengam</h1>
+                <img src="{% static 'example/images/school.jpeg' %}" alt="School Image" class="schoolimg">
                 <div class="subcontent">
                     <h1 class="big">Welcome to Srishti Matriculation School, Chengam</h1>
                     <p>
@@ -54,69 +53,181 @@
             </div>
         </div>
 
-        <div  class=" containermain block" >
-            <h2 style="position: relative;margin: 5%;">Our School Facilities</h2>
-        <div class="containerr ">
-                
-                <div class="slide">
-                    
-                    <div class="item" style="background-image: url('{% static 'example/images/bus.jpg' %}');">
-                        <div class="content">
-                            <div class="name">Switzerland</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('{% static 'example/images/libarary.jpg' %}');">
-                        <div class="content">
-                            <div class="name">Finland</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('{% static 'example/images/ground.jpg' %}');">
-                        <div class="content">
-                            <div class="name">Iceland</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('{% static 'example/images/school.jpeg' %}');">
-                        <div class="content">
-                            <div class="name">Australia</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url('{% static 'example/images/special1.jpg' %}');">
-                        <div class="content">
-                            <div class="name">Australia</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-            
-                </div>
-            
-                <div class="button">
-                    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            
+        
+   <!-- Top Students Section -->
+    <div class="text-center" style="overflow: hidden; margin-top: 10%;">
+        <h1  data-aos="fade-down"  data-aos-delay="200" data-aos-duration="500" >Our School Toppers</h1>
+    <div class="container-fluid top-students ">
+        
+        <div class="student-card"  data-aos="fade-left" data-aos-delay="100" data-aos-duration="500">
+            <img src="{% static 'example/images/student1.png' %}" alt="Student 1">
+            <div class="card-content">
+                <h3>Student Name 1</h3>
+                <p>Marks: 95%</p>
             </div>
         </div>
+        <div class="student-card"  data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
+            <img src="{% static 'example/images/student2.png' %}" alt="Student 2">
+            <div class="card-content">
+                <h3>Student Name 2</h3>
+                <p>Marks: 94%</p>
+            </div>
+        </div> 
+        <div class="student-card"  data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+            <img src="{% static 'example/images/student3.png' %}" alt="Student 3">
+            <div class="card-content">
+                <h3>Student Name 3</h3>
+                <p>Marks: 93%</p>
+            </div>
         </div>
+    </div>
+    </div>
+
+    <section class="facilities-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">Facilities and Benefits at Our School</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded  " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title ">Well-Ventilated Classrooms</h3>
+                            <p class="card-text">Our classrooms are designed to provide a healthy and comfortable learning environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Separate Classrooms for Boys and Girls</h3>
+                            <p class="card-text">We maintain separate classrooms for boys and girls to ensure a focused learning atmosphere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Special Training Programs</h3>
+                            <p class="card-text">We offer specialized training in computer skills, silambam (a traditional martial art), yoga, and karate.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Excellence in Spoken English and Handwriting</h3>
+                            <p class="card-text">We provide high-quality training in spoken English and handwriting with experienced instructors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Monthly Learning Assessments</h3>
+                            <p class="card-text">Regular learning evaluations are conducted, and the results are shared with parents to keep them informed of their child's progress.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Fee Refund for High Scorers in 12th Grade</h3>
+                            <p class="card-text">Students who score above 20 marks in the 12th grade examinations will receive a one-year fee refund.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Fee Concessions for 10th Grade Students</h3>
+                            <p class="card-text">Students in the 10th grade will receive fee concessions based on their public examination scores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Fee Concessions for Siblings</h3>
+                            <p class="card-text">Families with two or more children enrolled in our school will receive fee concessions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                        <div class="card-body">
+                            <h3 class="card-title">Support for Single Parent Students</h3>
+                            <p class="card-text">Students with a single parent will receive a 26% fee concession.</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <div class="containermain block">
+        <h2 style="position: relative; margin: 5%;">Our School Facilities</h2>
+        <div class="containerr">
+            <div class="slide">
+                <div class="item" style="background-image: url('{% static 'example/images/bus.jpg' %}');">
+                    <div class="content">
+                        <div class="name">Transport</div>
+                        <div class="des">Reliable and safe transport facilities.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('{% static 'example/images/library.jpg' %}');">
+                    <div class="content">
+                        <div class="name">Library</div>
+                        <div class="des">A vast collection of books and resources.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('{% static 'example/images/ground.jpg' %}');">
+                    <div class="content">
+                        <div class="name">Sports Ground</div>
+                        <div class="des">State-of-the-art sports facilities.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('{% static 'example/images/school.jpeg' %}');">
+                    <div class="content">
+                        <div class="name">Campus</div>
+                        <div class="des">A vibrant and dynamic campus.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('{% static 'example/images/special1.jpg' %}');">
+                    <div class="content">
+                        <div class="name">Special Facility</div>
+                        <div class="des">Unique facilities for overall development.</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
     </div>
 
 
     <!-- Load static JavaScript -->
     <script src="{% static 'example/js/scripts.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6sHHI5jWIl8qyfNUlZhI9WA1P2eU4IXduZwAik7OW2vskT+Bg2agxOoBoA9F" crossorigin="anonymous"></script>
     <script>
-        AOS.init({
-            duration: 120,
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 2000, // Duration of the animation (in milliseconds)
+                easing: 'ease-in', // Easing function
+                once: true, // Whether animation should happen only once - while scrolling down
+                mirror: true, // Whether elements should animate out while scrolling past them
+            });
         });
     </script>
 </body>

@@ -67,6 +67,31 @@ prev.addEventListener('click', function(){
     document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
 })
 
+// Function to handle animations when event list comes into view
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const eventItems = document.querySelectorAll('.event-item');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    eventItems.forEach(item => {
+        observer.observe(item);
+    });
+});
+
+
+
+
 
 
 
