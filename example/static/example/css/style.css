@@ -1,5 +1,5 @@
 /* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poetsen+One&family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lilita+One&family=Pacifico&family=Passion+One:wght@700;900&display=swap');
 body {
     
     margin: 0;
@@ -17,7 +17,7 @@ body {
     top: 0;
     z-index: 10;
     backdrop-filter: blur(2px);
-    background-color: rgba(115, 188, 224, 0.98); /* Use rgba for transparency effect */
+    background-color: rgba(5, 84, 124, 0.98); /* Use rgba for transparency effect */
     transition: background-color 0.3s ease, padding 0.3s ease; /
 }
 
@@ -128,17 +128,24 @@ body {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 2rem;
-        background-color:rgb(0, 98, 197);
+        padding: 2rem 1rem;
+        background-color:rgba(115, 188, 224, 0.98);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
         z-index: 10;
+    }
+
+    .navbar.scrolled {
+        backdrop-filter: blur(9px);
+        background-color: rgba(247, 251, 255, 0.174); /* Adjusted color with transparency */
+        padding: 0.1rem 1rem; /* Adjusted padding for smaller navbar */
+        
     }
     .navbar-menu {
         position: absolute;
@@ -146,7 +153,7 @@ body {
         left: -100%;
         width: 100%;
         height: 330px;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.832);
         backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
@@ -240,39 +247,11 @@ body {
 }
 
 
-/* Carousel slide */
-.carousel-slide {
-    display: flex;
-    image-resolution: 1080px;
-    transition: transform 0.5s ease-in-out;
-    height: 700px;
-}
-
-/* Carousel image */
-.carousel-image {
-    min-width: 100%;
-    top: 20px;
-    transition: transform 0.5s ease-in-out;
-    object-fit: cover;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(1.1); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.carousel-image {
-    animation: fadeIn 1.5s;
-}
-
-
-
 .welcome-section {
     display: flex;
     padding: 2rem;
     text-align: center;
-    background-color: #3663acc9;
+    background-color: #003688cf;
     border-radius: 10px;
     opacity: 8;
     transform: translateY(100px);
@@ -292,13 +271,15 @@ body {
     font-size: 2rem;
     margin-bottom: 1rem;
     line-height: 3rem;
+    font-family:Passion One;
+    letter-spacing: 0.1cap;
 }
 
 .welcome-section p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:Pacifico;
     font-size: 1rem;
     line-height: 2;
-    color: #333;
+    color: #ffffff;
 }
 .small{
     display: none;
@@ -320,7 +301,7 @@ body {
 
 
 .containermain{
-    padding:2%;
+   
     width: 100%;
     text-align: center;
     z-index: 15;
@@ -391,6 +372,9 @@ body {
     transform: translate(0, -50%);
     font-family: system-ui;
     display: none;
+    text-align: center;
+    background-color: #000000a4;
+    padding: 20px;
 }
 
 
@@ -489,7 +473,7 @@ body {
 
 }
 .student-card {
-    background-color: #dfb9df45;
+    background-color: #f8f1f845;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
     margin:10px;
@@ -518,11 +502,130 @@ body {
 }
 
 
+/* News and Events Section */
+.news-section {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+   
+}
+
+.news-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #0080ff;
+    text-transform: uppercase;
+}
+
+.news-section .card-body {
+    background-color: #00ebe0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+.news-section .card-title {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.news-section .card-text {
+    color: #ffffff;
+}
+
+
+/* Contact section styles */
+.contact-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.contact-section h2 {
+    margin-bottom: 50px;
+}
+
+.contact-section .card {
+    height: 100%;
+}
+
+.contact-section form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section form .form-control {
+    margin-bottom: 10px;
+}
+
+.contact-section form .btn-primary {
+    width: 100%;
+}
+
+
+
+/* Basic styles for the admission benefits section */
+.admission-benefits {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.667);
+    text-align: center;
+}
+
+.admission-benefits h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: Passion one;
+}
+
+.admission-benefits ul {
+    
+    
+}
+
+.admission-benefits li {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+
+
 /* style.css */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .carousel-container {
         width: 100%;
+        height: fit-content;
         
     }
     .carousel-image {
@@ -539,11 +642,11 @@ body {
         height: 400px;
     }
     .welcome-section {
-        
+        font-family:Pacifico;
         padding: 1rem;
         display: block;
         text-align: center;
-        background-color: #0054a8;
+        background-color: #0051ff81;
         width: 100%;
         max-width: 800px;
         border-radius: 10px;
@@ -567,41 +670,48 @@ body {
     }
 
 
-    .containerr .slide .item{
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        border-radius: 20px;
-        box-shadow: 0 30px 50px #505050;
-        background-position: 50% 50%;
-        background-size: cover;
-        display: inline-block;
-        transition: 0.5s;
-    }
+   /* Responsive adjustments */
+
+
 
     .containermain{
-        margin-top: 20%;
-        padding:0;
+    
         width: 100%;
         text-align: center;
+        z-index: 15;
     }
+
     .containerr{
-        
-        margin-top: 5%;
-        position: absolute;
+        position: relative;
         width:100%;
         height: 600px;
         background: #f5f5f5;
         box-shadow: 0 30px 50px #dbdbdb;
         overflow: hidden;
-        margin: 0;
+        z-index: 15;
+        
     }
+
+
+    .containerr .slide .item{
+        width: 15%;
+        height: 100px;
+        position: absolute;
+        top: 80%;
+        transform: translate(0, 20%);
+        border-radius: 10px;
+        box-shadow: 0 30px 50px #000000;
+        background-position: 100%;
+        background-size: cover;
+        display: inline-block;
+        transition: 0.4s;
+        
+    }
+
     .slide .item:nth-child(1),
     .slide .item:nth-child(2){
         top: 0;
-        left: 0;
+        left: 15px;
         transform: translate(0, 0);
         border-radius: 0;
         width: 100%;
@@ -610,10 +720,10 @@ body {
 
 
     .slide .item:nth-child(3){
-        left: 50%;
+        left: 60%;
     }
     .slide .item:nth-child(4){
-        left: calc(50% + 220px);
+        left: calc(50% + 120px);
     }
     .slide .item:nth-child(5){
         left: calc(50% + 440px);
@@ -629,14 +739,17 @@ body {
 
     .item .content{
         position: absolute;
-        top: 50%;
-        left: 100px;
+        top: 20%;
+        left: 10px;
         width: 300px;
         text-align: left;
-        color: #eee;
+        color: #ffffff;
         transform: translate(0, -50%);
         font-family: system-ui;
         display: none;
+        text-align: center;
+        background-color: #000000a4;
+        padding: 20px;
     }
 
 
@@ -646,28 +759,34 @@ body {
 
 
     .content .name{
-        font-size: 40px;
+        font-size: 30px;
         text-transform: uppercase;
         font-weight: bold;
         opacity: 0;
         animation: animate 1s ease-in-out 1 forwards;
+        
     }
 
     .content .des{
-        margin-top: 10px;
+        margin-top: 0px;
         margin-bottom: 20px;
         opacity: 0;
         animation: animate 1s ease-in-out 0.3s 1 forwards;
     }
 
     .content button{
-        padding: 10px 20px;
+        padding: 10px 10px;
         border: none;
         cursor: pointer;
         opacity: 0;
         animation: animate 1s ease-in-out 0.6s 1 forwards;
     }
 
+
+  
+
+
+    
     .top-stu-sec{
         overflow: hidden;
         margin-top: 28%;
@@ -680,10 +799,11 @@ body {
         margin-top: 50px;
         overflow: hidden;
         height: 50%;
+        
 
     }
     .student-card {
-        background-color: #bb00bb45;
+        background-color: #e294ff53;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
         margin:10px;
@@ -697,23 +817,68 @@ body {
     .student-card img {
         border-top-left-radius: 50px;
         border-top-right-radius: 30px;
-        padding: 5%;
-        width: 100%;
+        padding: 3%;
+        width: 20vw;
         height:fit-content;
     }
     .student-card .card-content {
-        padding: 10px;
+        padding: 1px;
         text-align: center;
     }
     .student-card h3 {
         margin: 10px 0;
-        font-size: 15px;
+        font-size: 10px;
+        font-family: Pacifico;
     }
     .student-card p {
         color: #555;
     }
-
+    .a-head{
+        font-family:Passion one;
+        text-align: center;
+        margin: 20px;
+        text-decoration:dotted;
+    
+    }
+    
+    .card{
+        height: 100%;
+        
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        background-color: #68d188;
+        border-radius: 10px;
+        
+    } 
+    .admission-benefits {
+        padding: 15px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.951);
+        background-color: #3feaea57;
+    }
+    .admission-benefits h2 {
+        font-size: 20px;
+        font-family: Passion one;
+    }
+    .admission-benefits li {
+        font-size: 16px;
+        
+    }
+   
 }
+    .card-title {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        color: #000;
+        font-family:Fugaz One;
+    }
+    .card-text {
+        flex-grow: 1;
+        color: #ffffff;
+        font-family:Lilita one;
+    }
+
 
 
 
@@ -751,25 +916,31 @@ body {
 
 } 
 
+.a-head{
+    font-family:Passion one;
+    text-align: center;
+    margin: 20px;
+    text-decoration:dotted;
 
-.card{
-    height: 100%;
-    background-color: #00e5ff6f;
 }
+
+
 .card-body {
     display: flex;
     flex-direction: column;
+    background-color: #0a9898;
+    border-radius: 10px;
+    
 }
 .card-title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 10px;
+    color: #000;
+    font-family:Fugaz One;
 }
 .card-text {
     flex-grow: 1;
-    color: #666;
-}
-
-
-.fcard{
-    background-color: #00e5ff95;
+    color: #ffffff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }

@@ -31,16 +31,54 @@
     </nav>
 
     <div>
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src="{% static 'example/images/p1.jpg' %}" class="carousel-image" alt="Image 1">
-                <img src="{% static 'example/images/p2.jpg' %}" class="carousel-image" alt="Image 2">
-                <img src="{% static 'example/images/image4.jpg' %}" class="carousel-image" alt="Image 3">
-                <img src="{% static 'example/images/image3.jpg' %}" class="carousel-image" alt="Image 4">
+        <section>
+            <div class="containermain block">
+                <div class="containerr">
+                    <div class="slide">
+                        <div class="item" style="background-image: url('{% static 'example/images/bus.jpg' %}');">
+                            <div class="content">
+                                <div class="name">Transport</div>
+                                <div class="des">Reliable and safe transport facilities.</div>
+                                <button>See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url('{% static 'example/images/library.jpg' %}');">
+                            <div class="content">
+                                <div class="name">Library</div>
+                                <div class="des">A vast collection of books and resources.</div>
+                                <button>See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url('{% static 'example/images/ground.jpg' %}');">
+                            <div class="content">
+                                <div class="name">Sports Ground</div>
+                                <div class="des">State-of-the-art sports facilities.</div>
+                                <button>See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url('{% static 'example/images/school.jpeg' %}');">
+                            <div class="content">
+                                <div class="name">Campus</div>
+                                <div class="des">A vibrant and dynamic campus.</div>
+                                <button>See More</button>
+                            </div>
+                        </div>
+                        <div class="item" style="background-image: url('{% static 'example/images/special1.jpg' %}');">
+                            <div class="content">
+                                <div class="name">Special Facility</div>
+                                <div class="des">Unique facilities for overall development.</div>
+                                <button>See More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="container-fluid block">
+            </section>
+        <div class="container-fluid" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
             <div class="welcome-section">
                 <h1 class="small">Welcome to Srishti higher-secondary School, Chengam</h1>
                 <img src="{% static 'example/images/school.jpeg' %}" alt="School Image" class="schoolimg">
@@ -56,28 +94,28 @@
         
    <!-- Top Students Section -->
     <div class=" top-stu-sec">
-        <h1  data-aos="fade-down"  data-aos-delay="200" data-aos-duration="500" >Our School Toppers</h1>
+        <h1 class="a-head" data-aos="fade-down"  data-aos-delay="100" data-aos-duration="300" >Our School Toppers</h1>
     <div class="container-fluid top-students ">
         
         <div class="student-card"  data-aos="fade-left" data-aos-delay="100" data-aos-duration="500">
             <img src="{% static 'example/images/student1.png' %}" alt="Student 1">
             <div class="card-content">
-                <h3>Student Name 1</h3>
-                <p>Marks: 95%</p>
+                <h3>M.Abishek</h3>
+                <p>494/500</p>
             </div>
         </div>
         <div class="student-card"  data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
             <img src="{% static 'example/images/student2.png' %}" alt="Student 2">
             <div class="card-content">
-                <h3>Student Name 2</h3>
-                <p>Marks: 94%</p>
+                <h3>P.Mahalakshmi</h3>
+                <p>485/500</p>
             </div>
         </div> 
         <div class="student-card"  data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
             <img src="{% static 'example/images/student3.png' %}" alt="Student 3">
             <div class="card-content">
-                <h3>Student Name 3</h3>
-                <p>Marks: 93%</p>
+                <h3>P.Sanmugapriyan</h3>
+                <p>480/500</p>
             </div>
         </div>
     </div>
@@ -85,10 +123,10 @@
 
     <section class="facilities-section py-5">
         <div class="container overflow-hidden">
-            <h2 class="text-center mb-4" data-aos="fade-down" data-aos-delay="100" data-aos-duration="700">Facilities and Benefits at Our School</h2>
+            <h2 class=" a-head mb-4" data-aos="fade-down" data-aos-delay="100" data-aos-duration="300">Facilities at Our School</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded  " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100  rounded  " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title ">Well-Ventilated Classrooms</h3>
                             <p class="card-text">Our classrooms are designed to provide a healthy and comfortable learning environment.</p>
@@ -96,7 +134,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100  rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Separate Classrooms for Boys and Girls</h3>
                             <p class="card-text">We maintain separate classrooms for boys and girls to ensure a focused learning atmosphere.</p>
@@ -104,7 +142,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100  rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Special Training Programs</h3>
                             <p class="card-text">We offer specialized training in computer skills, silambam (a traditional martial art), yoga, and karate.</p>
@@ -112,7 +150,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100  rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Excellence in Spoken English and Handwriting</h3>
                             <p class="card-text">We provide high-quality training in spoken English and handwriting with experienced instructors.</p>
@@ -120,7 +158,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Monthly Learning Assessments</h3>
                             <p class="card-text">Regular learning evaluations are conducted, and the results are shared with parents to keep them informed of their child's progress.</p>
@@ -128,7 +166,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Fee Refund for High Scorers in 12th Grade</h3>
                             <p class="card-text">Students who score above 20 marks in the 12th grade examinations will receive a one-year fee refund.</p>
@@ -136,7 +174,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100 rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Fee Concessions for 10th Grade Students</h3>
                             <p class="card-text">Students in the 10th grade will receive fee concessions based on their public examination scores.</p>
@@ -144,7 +182,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Fee Concessions for Siblings</h3>
                             <p class="card-text">Families with two or more children enrolled in our school will receive fee concessions.</p>
@@ -152,7 +190,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card h-100 bg-success bg-gradient text-light border-1 shadow-sm border-dark rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
                         <div class="card-body">
                             <h3 class="card-title">Support for Single Parent Students</h3>
                             <p class="card-text">Students with a single parent will receive a 26% fee concession.</p>
@@ -163,57 +201,46 @@
             </div>
         </div>
     </section>
-    
-    
-    
 
-    <div class="containermain block">
-        <h2 style="position: relative; margin: 5%;">Our School Facilities</h2>
-        <div class="containerr">
-            <div class="slide">
-                <div class="item" style="background-image: url('{% static 'example/images/bus.jpg' %}');">
-                    <div class="content">
-                        <div class="name">Transport</div>
-                        <div class="des">Reliable and safe transport facilities.</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('{% static 'example/images/library.jpg' %}');">
-                    <div class="content">
-                        <div class="name">Library</div>
-                        <div class="des">A vast collection of books and resources.</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('{% static 'example/images/ground.jpg' %}');">
-                    <div class="content">
-                        <div class="name">Sports Ground</div>
-                        <div class="des">State-of-the-art sports facilities.</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('{% static 'example/images/school.jpeg' %}');">
-                    <div class="content">
-                        <div class="name">Campus</div>
-                        <div class="des">A vibrant and dynamic campus.</div>
-                        <button>See More</button>
-                    </div>
-                </div>
-                <div class="item" style="background-image: url('{% static 'example/images/special1.jpg' %}');">
-                    <div class="content">
-                        <div class="name">Special Facility</div>
-                        <div class="des">Unique facilities for overall development.</div>
-                        <button>See More</button>
-                    </div>
-                </div>
+
+
+    <section>
+    <h1 class="a-head">News and Events</h1>
+    <marquee behavior="" direction="">1 to 12th Admission Going on 2024 - 2025 </marquee>
+    <div class="admission-benefits">
+        <h2>Admission Benefits for 2024-2025</h2>
+        <ul>
+            <li>Free Bag</li>
+            <li>Free Bus</li>
+            <li>Free Notebooks</li>
+            <li>School Uniform</li>
+            <li>Identity Card</li>
+        </ul>
+    </div>
+
+    </section>
+    <section>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="{% static 'example/images/g1.jpg' %}" alt="Image 1">
+                
             </div>
-            <div class="button">
-                <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+            <div class="gallery-item">
+                <img src="{% static 'example/images/g2.jpg' %}" alt="Image 2">
             </div>
+            <!-- Add more gallery items as needed -->
         </div>
+    </section>
     </div>
-    </div>
+
+
+
+
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Arunakshutech. All rights reserved.</p>
+        </div>
+    </footer>
 
 
     <!-- Load static JavaScript -->
