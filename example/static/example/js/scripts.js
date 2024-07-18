@@ -93,7 +93,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+window.addEventListener('scroll', () => {
+    const aboutSection = document.querySelector('.about-section');
+    const aboutContent = document.querySelector('.about-content');
+    const aboutImage = document.querySelector('.about-image');
 
+    const sectionPos = aboutSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.3;
+
+    if (sectionPos < screenPos) {
+        aboutContent.style.animation = 'fadeIn 1s ease-in-out forwards';
+        aboutImage.style.animation = 'fadeIn 1s ease-in-out forwards';
+    }
+});
 
 
 

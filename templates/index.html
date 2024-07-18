@@ -22,11 +22,11 @@
             <div class="bar"></div>
         </div>
         <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">News and Events</a></li>
-            <li><a href="#">Contact us</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About us</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="{% url 'news' %}">News and Events</a></li>
+            <li><a href="">Contact us</a></li>
         </ul>
     </nav>
 
@@ -204,34 +204,6 @@
 
 
 
-    <section>
-    <h1 class="a-head">News and Events</h1>
-    <marquee behavior="" direction="">1 to 12th Admission Going on 2024 - 2025 </marquee>
-    <div class="admission-benefits">
-        <h2>Admission Benefits for 2024-2025</h2>
-        <ul>
-            <li>Free Bag</li>
-            <li>Free Bus</li>
-            <li>Free Notebooks</li>
-            <li>School Uniform</li>
-            <li>Identity Card</li>
-        </ul>
-    </div>
-
-    </section>
-    <section>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="{% static 'example/images/g1.jpg' %}" alt="Image 1">
-                
-            </div>
-            <div class="gallery-item">
-                <img src="{% static 'example/images/g2.jpg' %}" alt="Image 2">
-            </div>
-            <!-- Add more gallery items as needed -->
-        </div>
-    </section>
-    </div>
 
 
 

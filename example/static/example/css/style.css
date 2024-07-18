@@ -1,7 +1,7 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lilita+One&family=Pacifico&family=Passion+One:wght@700;900&display=swap');
-body {
-    
+body{
+    background-color: #181a48;
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ body {
     top: 0;
     z-index: 10;
     backdrop-filter: blur(2px);
-    background-color: rgb(255, 255, 255); /* Use rgba for transparency effect */
+    background-color: rgb(245, 245, 245); /* Use rgba for transparency effect *//* Use rgba for transparency effect */
     transition: background-color 0.3s ease, padding 0.3s ease; /
 }
 
