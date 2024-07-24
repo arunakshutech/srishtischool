@@ -1,7 +1,8 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lilita+One&family=Pacifico&family=Passion+One:wght@700;900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Josefin+Sans:300,400,600,700,700i|Montserrat:200,300,400,500,600,700,800&display=swap");
 body{
-    background-color: #181a48;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -758,6 +759,13 @@ body{
     fill: #fff;
 }
 
+.services-card .features-caption{
+    background-color: #fcfcfc;
+    margin: 1rem;
+    padding: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
 @media (max-width: 768px) {
     .footer-wrapper {
         flex-direction: column;
@@ -998,7 +1006,7 @@ body{
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
         margin:10px;
         text-align: center;
-        width: 500px;
+        width: 700px;
         
         
 

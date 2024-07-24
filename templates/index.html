@@ -5,79 +5,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Srishti School</title>
-    <!-- Load static CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'example/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/progressbar_barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/gijgo.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/animated-headline.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'example/assets/css/styles.css' %}">
+
     <link rel="stylesheet" href="{% static 'example/css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <nav class="navbar" id="navbar" >
-        <div class="navbar-logo">
-            <span id="logo-text"></span>
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
         </div>
-        <div class="navbar-toggle" id="navbar-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="navbar-menu" id="navbar-menu">
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About us</a></li>
-            <li><a href="">Gallery</a></li>
-            <li><a href="{% url 'news' %}">News and Events</a></li>
-            <li><a href="">Contact us</a></li>
-        </ul>
-    </nav>
-
-    <div>
-        <section>
-            <div class="containermain block">
-                <div class="containerr">
-                    <div class="slide">
-                        <div class="item" style="background-image: url('{% static 'example/images/bus.jpg' %}');">
-                            <div class="content">
-                                <div class="name">Transport</div>
-                                <div class="des">Reliable and safe transport facilities.</div>
-                                <button>See More</button>
+    </div>
+   
+    <header>
+       
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+        
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="#" alt="fsdsfsfs"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                   
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li class="active" ><a href="index.html">Home</a></li>
+                                                <li><a href="courses.html">Courses</a></li>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="#">Blog</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="blog.html">Blog</a></li>
+                                                        <li><a href="blog_details.html">Blog Details</a></li>
+                                                        <li><a href="elements.html">Element</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                               
+                                                <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
+                                                <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
                             </div>
                         </div>
-                        <div class="item" style="background-image: url('{% static 'example/images/library.jpg' %}');">
-                            <div class="content">
-                                <div class="name">Library</div>
-                                <div class="des">A vast collection of books and resources.</div>
-                                <button>See More</button>
-                            </div>
-                        </div>
-                        <div class="item" style="background-image: url('{% static 'example/images/ground.jpg' %}');">
-                            <div class="content">
-                                <div class="name">Sports Ground</div>
-                                <div class="des">State-of-the-art sports facilities.</div>
-                                <button>See More</button>
-                            </div>
-                        </div>
-                        <div class="item" style="background-image: url('{% static 'example/images/school.jpeg' %}');">
-                            <div class="content">
-                                <div class="name">Campus</div>
-                                <div class="des">A vibrant and dynamic campus.</div>
-                                <button>See More</button>
-                            </div>
-                        </div>
-                        <div class="item" style="background-image: url('{% static 'example/images/special1.jpg' %}');">
-                            <div class="content">
-                                <div class="name">Special Facility</div>
-                                <div class="des">Unique facilities for overall development.</div>
-                                <button>See More</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
-            </section>
+        </div>
+    </header>
+    <main>
+               
+                <section class="slider-area ">
+                    <div class="slider-active">
+                    
+                        <div class="single-slider slider-height d-flex align-items-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-7 col-md-12">
+                                        <div class="hero__caption">
+                                            <h1 data-animation="fadeInLeft" data-delay="0.2s"><b>Srishti</b> <br>higher-secondary School</h1>
+                                            <p data-animation="fadeInLeft" data-delay="0.4s"> Special attention is also paid in Srishti to nurture education in an environment of breezy freedom and unparalleled personal rapport</p>
+                                            <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Admission</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>          
+                        </div>
+                    </div>
+                </section>
+
+            
+    </main>
+    <div>
+        <section>
+ 
         <div class="container-fluid" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
             <div class="welcome-section">
                 <h1 class="small">Welcome to Srishti higher-secondary School, Chengam</h1>
@@ -121,169 +154,224 @@
     </div>
     </div>
 
-    <section class="facilities-section py-5">
-        <div class="container overflow-hidden">
-            <h2 class=" a-head mb-4" data-aos="fade-down" data-aos-delay="100" data-aos-duration="300">Facilities at Our School</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100  rounded  " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title ">Well-Ventilated Classrooms</h3>
-                            <p class="card-text">Our classrooms are designed to provide a healthy and comfortable learning environment.</p>
+    <section class="facilities-section">
+        <div class="container">
+            <h2 class="text-center pt-5 font-size-5" data-aos="fade-down" data-aos-delay="100" data-aos-duration="300">Facilities at Our School</h2>
+            <div class="services-card">
+                <div class="container">
+                    <div class="row justify-content-sm-center">
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-services mb-30">
+                                <div class="features-icon">
+                                    <img src="{% static 'example/assets/img/icon/icon1.svg' %}" alt="Well-Ventilated Classrooms Icon">
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Well-Ventilated Classrooms</h3>
+                                    <p>Our classrooms are designed to provide a healthy and comfortable learning environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-services mb-30">
+                                <div class="features-icon">
+                                    <img src="{% static 'example/assets/img/icon/icon2.svg' %}" alt="Separate Classrooms for Boys and Girls Icon">
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Separate Classrooms for Boys and Girls</h3>
+                                    <p>We maintain separate classrooms for boys and girls to ensure a focused learning atmosphere.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-services mb-30">
+                                <div class="features-icon">
+                                    <img src="{% static 'example/assets/img/icon/icon3.svg' %}" alt="Special Training Programs Icon">
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Special Training Programs</h3>
+                                    <p>We offer specialized training in computer skills, silambam (a traditional martial art), yoga, and karate.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-services mb-30">
+                                <div class="features-icon">
+                                    <img src="{% static 'example/assets/img/icon/voice-presentation-svgrepo-com.svg' %}" alt="Excellence in Spoken English and Handwriting Icon">
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Excellence in Spoken English and Handwriting</h3>
+                                    <p>We provide high-quality training in spoken English and handwriting with experienced instructors.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-services mb-30">
+                                <div class="features-icon">
+                                    <img src="{% static 'example/assets/img/icon/book-and-person-summer-svgrepo-com.svg' %}" alt="Monthly Learning Assessments Icon">
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Monthly Learning Assessments</h3>
+                                    <p>Regular learning evaluations are conducted, and the results are shared with parents to keep them informed of their child's progress.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-services mb-30">
+                                <div class="features-icon">
+                                    <img src="{% static 'example/assets/img/icon/refund-svgrepo-com.svg' %}" alt="Fee Refund for High Scorers in 12th Grade Icon">
+                                </div>
+                                <div class="features-caption">
+                                    <h3>Fee Refund for High Scorers in 12th Grade</h3>
+                                    <p>Students who score above 20 marks in the 12th grade examinations will receive a one-year fee refund.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card h-100  rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Separate Classrooms for Boys and Girls</h3>
-                            <p class="card-text">We maintain separate classrooms for boys and girls to ensure a focused learning atmosphere.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100  rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Special Training Programs</h3>
-                            <p class="card-text">We offer specialized training in computer skills, silambam (a traditional martial art), yoga, and karate.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100  rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Excellence in Spoken English and Handwriting</h3>
-                            <p class="card-text">We provide high-quality training in spoken English and handwriting with experienced instructors.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Monthly Learning Assessments</h3>
-                            <p class="card-text">Regular learning evaluations are conducted, and the results are shared with parents to keep them informed of their child's progress.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Fee Refund for High Scorers in 12th Grade</h3>
-                            <p class="card-text">Students who score above 20 marks in the 12th grade examinations will receive a one-year fee refund.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100 rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Fee Concessions for 10th Grade Students</h3>
-                            <p class="card-text">Students in the 10th grade will receive fee concessions based on their public examination scores.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Fee Concessions for Siblings</h3>
-                            <p class="card-text">Families with two or more children enrolled in our school will receive fee concessions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100   rounded " data-aos="fade-up" data-aos-delay="100" data-aos-duration="300">
-                        <div class="card-body">
-                            <h3 class="card-title">Support for Single Parent Students</h3>
-                            <p class="card-text">Students with a single parent will receive a 26% fee concession.</p>
-                        </div>
-                    </div>
-                </div>
-                
             </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-    <section id="mk-footer" class="container-fluid" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
-        <div class="footer-wrapper mk-grid">
-            <div class="mk-padding-wrapper">
-                <div class="mk-col-1-3">
-                    <section id="text-2" class="widget widget_text">
-                        <div class="widgettitle">About Us</div>
-                        <div class="textwidget">
-                            <p>Srishti International Matriculation School is a budding school which is practicing International curriculum. It is one of the leading schools in North Chennai. The school has a center approval and can offer Edexcel International Primary, Lower Secondary and IGCSE qualifications to students.</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="mk-col-1-3">
-                    <section id="contact_info-2" class="widget widget_contact_info">
-                        <div class="widgettitle">Contact Us</div>
-                        <ul itemscope="itemscope" itemtype="https://schema.org/Person">
-                            <li>
-                                <svg class="mk-svg-icon" data-name="mk-icon-home" style="height:20px; width:70px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1664 1792">
-                                    <path d="M1408 992v480q0 26-19 45t-45 19h-384v-384h-256v384h-384q-26 0-45-19t-19-45v-480q0-1 .5-3t.5-3l575-474 575 474q1 2 1 6zm223-69l-62 74q-8 9-21 11h-3q-13 0-21-7l-692-577-692 577q-12 8-24 7-13-2-21-11l-62-74q-8-10-7-23.5t11-21.5l719-599q32-26 76-26t76 26l244 204v-195q0-14 9-23t23-9h192q14 0 23 9t9 23v408l219 182q10 8 11 21.5t-7 23.5z"/>
-                                </svg>
-                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">No:4, Ullaramman koil street, Old Washermenpet, Chennai-600021 Tamil Nadu</span>
-                            </li>
-                            <li>
-                                <svg class="mk-svg-icon" data-name="mk-icon-phone" style="height:16px; width:94.57px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1408 1792">
-                                    <path d="M1408 1240q0 27-10 70.5t-21 68.5q-21 50-122 106-94 51-186 51-27 0-52.5-3.5t-57.5-12.5-47.5-14.5-55.5-20.5-49-18q-98-35-175-83-128-79-264.5-215.5t-215.5-264.5q-48-77-83-175-3-9-18-49t-20.5-55.5-14.5-47.5-12.5-57.5-3.5-52.5q0-92 51-186 56-101 106-122 25-11 68.5-21t70.5-10q14 0 21 3 18 6 53 76 11 19 30 54t35 63.5 31 53.5q3 4 17.5 25t21.5 35.5 7 28.5q0 20-28.5 50t-62 55-62 53-28.5 46q0 9 5 22.5t8.5 20.5 14 24 11.5 19q76 137 174 235t235 174q2 1 19 11.5t24 14 20.5 8.5 22.5 5q18 0 46-28.5t53-62 55-62 50-28.5q14 0 28.5 7t35.5 21.5 25 17.5q25 15 53.5 31t63.5 35 54 30q70 35 76 53 3 7 3 21z"/>
-                                </svg>
-                                <span>044-2596-3652 / 7010651875</span>
-                            </li>
-                            <li>
-                                <svg class="mk-svg-icon" data-name="mk-icon-envelope" style="height:16px; width:44.57px;"  data-cacheid="icon-66974a54816eb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792">
-                                    <path d="M1792 710v794q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-794q44 49 101 87 362 246 497 345 57 42 92.5 65.5t94.5 48 110 24.5h2q51 0 110-24.5t94.5-48 92.5-65.5q170-123 498-345 57-39 100-87zm0-294q0 79-49 151t-122 123q-376 261-468 325-10 7-42.5 30.5t-54 38-52 32.5-57.5 27-50 9h-2q-23 0-50-9t-57.5-27-52-32.5-54-38-42.5-30.5q-91-64-262-182.5t-205-142.5q-62-42-117-115.5t-55-136.5q0-78 41.5-130t118.5-52h1472q65 0 112.5 47t47.5 113z"/>
-                                </svg>
-                                <span><a itemprop="email" href="mailto:contact&#64;srishtiinternationalschool.com"> contact&#64;srishtiinternationalschool.com</a></span>
-                            </li>
-                        </ul>
-                    </section>
-
-                </div>
-                <div class="mk-col-1-3">
-                    <section id="gtranslate-2" class="widget gtranslate_widget"></section>
-                    <div >
-                        
-                        <nav id="mk-footer-navigation" class="footer_menu">
-                            <ul id="menu-link" class="menu">
-                                <li id="menu-item-320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-320">
-                                    <a href="http://www.srishtiinternationalschool.com/beyond-class-room/">Gallery</a>
-                                </li>
-                                <li id="menu-item-321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-321">
-                                    <a href="http://www.srishtiinternationalschool.com/contact-us/">Contact Us</a>
-                                </li>
-                                <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-322">
-                                    <a href="http://www.srishtiinternationalschool.com/academics/">News and Events</a>
-                                </li>
-                                <li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323">
-                                    <a href="http://www.srishtiinternationalschool.com/admission/">Admission</a>
-                                </li>
-                                <li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324">
-                                    <a href="http://www.srishtiinternationalschool.com/about-us/">About Us</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                   
-                    <div class="clearboth"></div>
-                </div>
-                </div>
-            </div> <span class="mk-footer-copyright">
-                        © 2024 Srishti higher-secondary  School Chengam - All rights reserved. Designed by 
-                        <a class="iwc-f" href="https://www.indiawebcreators.com" target="_blank"> Arunakshukumar</a>
-                    </span>
         </div>
     </section>
     
 
 
+    <footer>
+        <div class="footer-wrappper footer-bg">
+           <!-- Footer Start-->
+           <div class="footer-area footer-padding">
+               <div class="container">
+                   <div class="row justify-content-between">
+                       <div class="col-xl-4 col-lg-5 col-md-4 col-sm-6">
+                           <div class="single-footer-caption mb-50">
+                               <div class="single-footer-caption mb-30">
+                                   <!-- logo -->
+                                   <div class="footer-logo mb-25">
+                                       <a href="index.html"><img src="{% static 'example/gallery/footer_bg.png' %}" alt=""></a>
+                                   </div>
+                                   <div class="footer-tittle">
+                                       <div class="footer-pera">
+                                           <p>The automated process starts as soon as your clothes go into the machine.</p>
+                                       </div>
+                                   </div>
+                                   <!-- social -->
+                                   <div class="footer-social">
+                                       <a href="#"><i class="fab fa-twitter"></i></a>
+                                       <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                       <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
+                           <div class="single-footer-caption mb-50">
+                               <div class="footer-tittle">
+                                   <h4>Our solutions</h4>
+                                   <ul>
+                                       <li><a href="#">Design & creatives</a></li>
+                                       <li><a href="#">Telecommunication</a></li>
+                                       <li><a href="#">Restaurant</a></li>
+                                       <li><a href="#">Programing</a></li>
+                                       <li><a href="#">Architecture</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
+                           <div class="single-footer-caption mb-50">
+                               <div class="footer-tittle">
+                                   <h4>Support</h4>
+                                   <ul>
+                                       <li><a href="#">Design & creatives</a></li>
+                                       <li><a href="#">Telecommunication</a></li>
+                                       <li><a href="#">Restaurant</a></li>
+                                       <li><a href="#">Programing</a></li>
+                                       <li><a href="#">Architecture</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                           <div class="single-footer-caption mb-50">
+                               <div class="footer-tittle">
+                                   <h4>Company</h4>
+                                   <ul>
+                                       <li><a href="#">Design & creatives</a></li>
+                                       <li><a href="#">Telecommunication</a></li>
+                                       <li><a href="#">Restaurant</a></li>
+                                       <li><a href="#">Programing</a></li>
+                                       <li><a href="#">Architecture</a></li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <!-- footer-bottom area -->
+           <div class="footer-bottom-area">
+               <div class="container">
+                   <div class="footer-border">
+                       <div class="row d-flex align-items-center">
+                           <div class="col-xl-12 ">
+                               <div class="footer-copy-right text-center">
+                                   <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                     Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <!-- Footer End-->
+         </div>
+     </footer> 
+    
+
+
     <!-- Load static JavaScript -->
     <script src="{% static 'example/js/scripts.js' %}"></script>
+    <script src="{% static 'example/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{% static 'example/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'example/assets/js/popper.min.js' %}"></script>
+<script src="{% static 'example/assets/js/bootstrap.min.js' %}"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{% static 'example/assets/js/jquery.slicknav.min.js' %}"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{% static 'example/assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'example/assets/js/slick.min.js' %}"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="{% static 'example/assets/js/wow.min.js' %}"></script>
+<script src="{% static 'example/assets/js/animated.headline.js' %}"></script>
+<script src="{% static 'example/assets/js/jquery.magnific-popup.js' %}"></script>
+
+<!-- Date Picker -->
+<script src="{% static 'example/assets/js/gijgo.min.js' %}"></script>
+<!-- Nice-select, sticky -->
+<script src="{% static 'example/assets/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'example/assets/js/jquery.sticky.js' %}"></script>
+<!-- Progress -->
+<script src="{% static 'example/assets/js/jquery.barfiller.js' %}"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="{% static 'example/assets/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'example/assets/js/waypoints.min.js' %}"></script>
+<script src="{% static 'example/assets/js/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'example/assets/js/hover-direction-snake.min.js' %}"></script>
+
+<!-- contact js -->
+<script src="{% static 'example/assets/js/contact.js' %}"></script>
+<script src="{% static 'example/assets/js/jquery.form.js' %}"></script>
+<script src="{% static 'example/assets/js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'example/assets/js/mail-script.js' %}"></script>
+<script src="{% static 'example/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+<!-- Jquery Plugins, main Jquery --> 
+<script src="{% static 'example/assets/js/plugins.js' %}"></script>
+<script src="{% static 'example/assets/js/main.js' %}"></script>
+
+    <script src="{% static 'example/js/main.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6sHHI5jWIl8qyfNUlZhI9WA1P2eU4IXduZwAik7OW2vskT+Bg2agxOoBoA9F" crossorigin="anonymous"></script>
     <script>
