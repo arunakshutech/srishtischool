@@ -252,7 +252,7 @@ body{
     display: flex;
     padding: 2rem;
     text-align: center;
-    background-color: #003688cf;
+    background-image: linear-gradient(rgb(197, 58, 232),rgb(79, 79, 255));
     border-radius: 10px;
     opacity: 8;
     transform: translateY(100px);
@@ -268,17 +268,18 @@ body{
     border-radius: 9px;
 }
 
-.welcome-section h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    line-height: 3rem;
-    font-family:Passion One;
+.welcome-section .big {
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+    line-height: 6rem;
+    color: whitesmoke;
     letter-spacing: 0.1cap;
 }
 
 .welcome-section p {
-    font-family:Pacifico;
-    font-size: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
     line-height: 2;
     color: #ffffff;
 }
@@ -474,13 +475,14 @@ body{
 
 }
 .student-card {
-    background-color: #c48ee045;
+    background-image: linear-gradient(rgb(0, 251, 255),rgb(204, 0, 255),rgb(41, 39, 40));
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.418);
     margin:10px;
     text-align: center;
     width: 300px;
     backdrop-filter: blur(10px);
+    
 
     
 }
@@ -495,11 +497,11 @@ body{
     padding: 20px;
     text-align: center;
 }
-.student-card h3 {
-    margin: 10px 0;
-}
+
 .student-card p {
-    color: #555;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 
@@ -766,6 +768,62 @@ body{
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+
+#contact_form .form-input {
+	border: 1px solid #e4e4e4;
+}
+input {
+	height: 42px;
+	padding: 0 1rem;
+	background: #fff;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	border:0;
+}
+#contact_form textarea {
+	resize: none;
+	padding: 1rem;
+	height: 150px;
+	background: #fff;
+	border: 0;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.btn-grad {
+ padding: .7rem 2rem;
+	display: inline-block;
+	color: #fff;
+	border-radius: 2rem;
+	border: 0;
+	background: #7a60ff;
+	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+	cursor:pointer;
+}
+.contact-info {
+	padding: 2rem 2rem 1rem;
+	border-radius: 8px;
+	background: #7a60ff;
+	background: linear-gradient(to left, #7a60ff, #cd9ffa);
+}
+.contact-item {
+	margin:23px 0px;
+}
+.contact-item i {
+	font-size: 20px;
+}
+.contact-item p {
+	line-height: 20px;
+	margin: 0;
+}
+
 @media (max-width: 768px) {
     .footer-wrapper {
         flex-direction: column;
@@ -1026,10 +1084,12 @@ body{
     .student-card h3 {
         margin: 10px 0;
         font-size: 10px;
-        font-family: Pacifico;
+        
     }
     .student-card p {
-        color: #555;
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: 800;
     }
     .a-head{
         font-family:Passion one;
