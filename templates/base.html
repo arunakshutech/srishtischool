@@ -21,9 +21,10 @@
     <link rel="stylesheet" href="{% static 'example/assets/css/slick.css' %}">
     <link rel="stylesheet" href="{% static 'example/assets/css/nice-select.css' %}">
     <link rel="stylesheet" href="{% static 'example/assets/css/styles.css' %}">
-
     <link rel="stylesheet" href="{% static 'example/css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    {% block style %}
+    {% endblock style %}
 </head>
 <body>
     <div id="preloader-active">
@@ -56,9 +57,9 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li class="active" ><a href="index.html">Home</a></li>
+                                                <li class="active" ><a href="{% url 'home' %}">Home</a></li>
                                                 <li><a href="courses.html">Gallery</a></li>
-                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="{% url 'about' %}">About</a></li>
                                                 <li><a href="{% url 'contact' %}">Contact</a></li>
                                                 <li class="button-header"><a href="login.html" class="btn btn3">Admission</a></li>
                                             </ul>
@@ -76,8 +77,8 @@
             </div>
         </div>
     </header>
-    {block content}
-    {endblock content}
+    {% block content %}
+    {% endblock content %}
     
     <footer>
         <div class="footer-wrappper footer-bg">

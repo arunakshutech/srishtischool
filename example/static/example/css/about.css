@@ -4,106 +4,6 @@
 
 
 /* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 4rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    backdrop-filter: blur(2px);
-    background-color: rgb(255, 255, 255); /* Use rgba for transparency effect */
-    transition: background-color 0.3s ease, padding 0.3s ease; /
-}
-
-.navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    
-}
-
-.navbar.scrolled {
-    backdrop-filter: blur(9px);
-    background-color: rgba(247, 251, 255, 0.174); /* Adjusted color with transparency */
-    padding: 0.2rem 2rem; /* Adjusted padding for smaller navbar */
-    
-}
-
-
-
-.navbar-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: 15;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    background-color: whitesmoke;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.navbar-menu li {
-    justify-content: space-around;
-    
-    padding: 15px;
-}
-
-.navbar-menu li a {
-    position: relative;
-    text-decoration: none;
-    color: #000000;
-    font-size: 1rem;
-    transition: color 0.3s;
-    font-weight: 500;
-    
-}
-
-.navbar-menu li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: -4px;
-    left: 0;
-    background-color: #0319aa;
-    transition: width 0.3s;
-}
-
-.navbar-menu li a:hover::after {
-    width: 100%;
-}
-
-.navbar-menu li a:hover {
-    color: #0319aa;
-}
-
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.navbar-toggle .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-    transition: all 0.3s;
-}
-
-
-
-#logo-text::after {
-    content: 'Srishti higher-secondary School';
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: typing 1s steps(30, end), blink-caret 0.75s step-end infinite;
-    color: rgb(0, 0, 0);
-    
-}
 
 
 
@@ -116,6 +16,7 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    background-color: transparent;
 }
 
 .about-content {
@@ -173,7 +74,7 @@
 
 
 .about-section {
-    background: #181a48;
+    background-image: linear-gradient(rgb(16, 0, 240),rgb(234, 0, 255));
     padding: 50px 20px;
     text-align: center;
 }
@@ -199,6 +100,8 @@ h2 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    
+
 }
 
 .card {
@@ -237,7 +140,8 @@ li {
     background: #eee;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 40px;
+    margin: 40px;
+    text-align: center;
 }
 
 
